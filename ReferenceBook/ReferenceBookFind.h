@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <iostream>
 #include <vector>
 #include <string>
 #include "RFPage.h"
@@ -7,19 +8,22 @@
 class ReferenceBookFind
 {
 private:
-    std::vector<RFPage> founded; // Список найденных страниц
-    
+
+    std::vector <std::reference_wrapper< const RFPage >> founded;
+
 public:
 
     // Поиск по названию фирмы
-    void findByName(const std::vector<ReferenceBook>& books, const std::string& name);
+    void findByName(const ReferenceBook& book, const std::string& name);
 
     // Поиск по владельцу
-    void findByOwner(const std::vector<ReferenceBook>& books, const std::string& owner);
+    void findByOwner(const ReferenceBook& book, const std::string& owner);
 
     // Поиск по номеру телефона
-    void findByPhone(const std::vector<ReferenceBook>& books, const std::string& phone);
+    void findByPhone(const ReferenceBook& book, const std::string& phone);
 
     // Поиск по роду деятельности
-    void findByActivity(const std::vector<ReferenceBook>& books, const std::string& activity);
+    void findByActivity(const ReferenceBook& book, const std::string& activity);
+
+	void showFounded() const;
 };
