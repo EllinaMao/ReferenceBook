@@ -24,8 +24,9 @@ public:
 	void addPage(const RFPage& page) {
 		pages.push_back(page);
 	}
-	
-	// Function to save the reference book to a file
+
+	const std::vector<RFPage>& getPages() const { return pages; }
+
 	void printAll() const;
 
 };

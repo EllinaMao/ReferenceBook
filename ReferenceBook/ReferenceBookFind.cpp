@@ -1,73 +1,82 @@
 ﻿#include "ReferenceBookFind.h"  
 using namespace std;  
 
-vector<const RFPage*> ReferenceBookFind::findByName(const vector<RFPage>& pages, const string& name) {  
+void ReferenceBookFind::findByName(const vector<ReferenceBook>& books, const string& name) {
     if (name.empty()) {  
         throw invalid_argument("Name cannot be empty");  
     }  
-    if (pages.empty()) {  
+    if (books.empty()) {
         throw invalid_argument("Pages cannot be empty");  
     }  
 
-    vector<const RFPage*> result;  
-    for (auto it = pages.cbegin(); it != pages.cend(); ++it) {  
-        if (it->getFirmName() == name) {  
-            result.push_back(&(*it));
-        }  
-    }  
-    return result;  
+    founded.clear();
+
+    for (auto bookIt = books.cbegin(); bookIt != books.cend(); ++bookIt) {
+        const auto& pages = bookIt->getPages();
+        for (auto pageIt = pages.cbegin(); pageIt != pages.cend(); ++pageIt) {
+            if (pageIt->getFirmName() == name) {
+                founded.push_back(*pageIt);
+            }
+        }
+    }
 }
 
-vector<const RFPage*> ReferenceBookFind::findByOwner(const vector<RFPage>& pages, const string& owner)
+void ReferenceBookFind::findByOwner(const vector<ReferenceBook>& books, const string& owner)
 {
     if (owner.empty()) {
         throw invalid_argument("owner cannot be empty");
     }
-    if (pages.empty()) {
+    if (books.empty()) {
         throw invalid_argument("Pages cannot be empty");
     }
 
-    vector<const RFPage*> result;
-    for (auto it = pages.cbegin(); it != pages.cend(); ++it) {
-        if (it->getOwner() == owner) {
-            result.push_back(&(*it));
+    founded.clear();
+    for (auto bookIt = books.cbegin(); bookIt != books.cend(); ++bookIt) {
+        const auto& pages = bookIt->getPages();
+        for (auto pageIt = pages.cbegin(); pageIt != pages.cend(); ++pageIt) {
+            if (pageIt->getOwner() == owner) {
+                founded.push_back(*pageIt);
+            }
         }
     }
-    return result;
 }
 
-vector<const RFPage*> ReferenceBookFind::findByPhone(const vector<RFPage>& pages, const string& phone)
+void ReferenceBookFind::findByPhone(const vector<ReferenceBook>& books, const string& phone)
 {
     if (phone.empty()) {
         throw invalid_argument("phone cannot be empty");
     }
-    if (pages.empty()) {
+    if (books.empty()) {
         throw invalid_argument("Pages cannot be empty");
     }
 
-    vector<const RFPage*> result;
-    for (auto it = pages.cbegin(); it != pages.cend(); ++it) {
-        if (it->getPhone() == phone) {
-            result.push_back(&(*it));
+    founded.clear();
+    for (auto bookIt = books.cbegin(); bookIt != books.cend(); ++bookIt) {
+        const auto& pages = bookIt->getPages();
+        for (auto pageIt = pages.cbegin(); pageIt != pages.cend(); ++pageIt) {
+            if (pageIt->getPhone() == phone) {
+                founded.push_back(*pageIt);
+            }
         }
     }
-    return result;
 }
 
-vector<const RFPage*> ReferenceBookFind::findByActivity(const vector<RFPage>& pages, const string& activity)
+void ReferenceBookFind::findByActivity(const vector<ReferenceBook>& books, const string& activity)
 {
     if (activity.empty()) {
         throw invalid_argument("activity cannot be empty");
     }
-    if (pages.empty()) {
+    if (books.empty()) {
         throw invalid_argument("Pages cannot be empty");
     }
 
-    vector<const RFPage*> result;
-    for (auto it = pages.cbegin(); it != pages.cend(); ++it) {
-        if (it->getActivityType() == activity) {
-            result.push_back(&(*it));
+    founded.clear();
+    for (auto bookIt = books.cbegin(); bookIt != books.cend(); ++bookIt) {
+        const auto& pages = bookIt->getPages();
+        for (auto pageIt = pages.cbegin(); pageIt != pages.cend(); ++pageIt) {
+            if (pageIt->getActivityType() == activity) {
+                founded.push_back(*pageIt);
+            }
         }
     }
-    return result;
 }
