@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="classwork.cpp" />
+    <ClCompile Include="homework" />
     <ClCompile Include="ReferenceBook.cpp" />
     <ClCompile Include="ReferenceBookFind.cpp" />
     <ClCompile Include="RFPage.cpp" />
