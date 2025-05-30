@@ -128,6 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="classwork.cpp" />
+    <ClCompile Include="ReferenceBook.cpp" />
+    <ClCompile Include="RFPage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ReferenceBook.h" />
+    <ClInclude Include="RFPage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

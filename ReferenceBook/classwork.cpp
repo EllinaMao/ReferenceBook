@@ -1,5 +1,25 @@
-// classwork.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿// classwork.cpp : This file contains the 'main' function. Program execution begins and ends there.
+/*
+* Потоки
+Задание 
+Создать класс СПРАВОЧНИК со следующими полями:
+
+Название фирмы
+Владелец
+Телефон
+Адрес
+Род деятельности
+Реализовать следующие возможности:
+
+Поиск по названию
+Поиск по владельцу
+Поиск по номеру телефона
+Поиск по роду деятельности
+Показ всех записей и добавление
+Вся информация, должна сохранятся в файле, должна быть реализована возможность добавления новых данных.
+
+
+*/
 
 #include <iostream>
 using namespace std;

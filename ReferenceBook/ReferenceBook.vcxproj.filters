@@ -18,5 +18,19 @@
     <ClCompile Include="classwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RFPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReferenceBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ReferenceBook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RFPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
