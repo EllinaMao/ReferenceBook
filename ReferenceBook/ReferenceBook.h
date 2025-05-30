@@ -3,6 +3,9 @@
 #include <vector>
 #include <iostream>
 #include "RFPage.h"
+#include "ExceptionsBooks.h"
+
+
 /*
 Поиск по названию
 Поиск по владельцу
@@ -22,7 +25,7 @@ public:
 		pages.push_back(page);
 	}
 	
-	void findByName(const std::string& name) const;
+	// Function to save the reference book to a file
 	void printAll() const;
 
 };

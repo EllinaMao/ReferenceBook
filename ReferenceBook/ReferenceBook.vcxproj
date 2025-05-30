@@ -129,10 +129,13 @@
   <ItemGroup>
     <ClCompile Include="classwork.cpp" />
     <ClCompile Include="ReferenceBook.cpp" />
+    <ClCompile Include="ReferenceBookFind.cpp" />
     <ClCompile Include="RFPage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExceptionsBooks.h" />
     <ClInclude Include="ReferenceBook.h" />
+    <ClInclude Include="ReferenceBookFind.h" />
     <ClInclude Include="RFPage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
