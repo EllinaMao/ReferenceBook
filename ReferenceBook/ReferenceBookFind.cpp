@@ -74,6 +74,8 @@ void ReferenceBookFind::findByActivity(const ReferenceBook& book, const std::str
 
 void ReferenceBookFind::showFounded() const
 {  
+	cout << "Founded pages: " << founded.size() << endl;
+
     if (founded.empty()) {  
         cout << "No results found." << endl;  
         return;  

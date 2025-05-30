@@ -2,8 +2,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream> 
+#include <nlohmann/json.hpp> 
+
 #include "RFPage.h"
-#include "ExceptionsBooks.h"
 
 /*
 Поиск по названию
@@ -28,4 +30,6 @@ public:
 
 	void printAll() const;
 
+	void saveToFile(const std::string& filename) const;
+	void loadFromFile(const std::string& filename);
 };

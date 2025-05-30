@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <iterator>
+#include <nlohmann/json.hpp> 
 
 class RFPage{
 private:
@@ -23,4 +24,8 @@ public:
 	const std::string& getAddress() const { return address; }
 	const std::string& getActivityType() const { return businessActivity; }
 	void display() const;
+	
 };
+
+void to_json(nlohmann::json& j, const RFPage& p);
+void from_json(const nlohmann::json& j, RFPage& p);

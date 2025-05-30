@@ -1,0 +1,46 @@
+{
+  "pages": [
+    {
+      "address": "Address1",
+      "businessActivity": "IT",
+      "firmName": "FirmA",
+      "owner": "Owner1",
+      "phone": "12345"
+    },
+    {
+      "address": "Address1",
+      "businessActivity": "IT",
+      "firmName": "FirmA",
+      "owner": "Owner1",
+      "phone": "12345"
+    },
+    {
+      "address": "Address1",
+      "businessActivity": "IT",
+      "firmName": "FirmA",
+      "owner": "Owner1",
+      "phone": "12345"
+    },
+    {
+      "address": "Address3",
+      "businessActivity": "IT",
+      "firmName": "FirmA",
+      "owner": "Owner3",
+      "phone": "54321"
+    },
+    {
+      "address": "Address2",
+      "businessActivity": "Finance",
+      "firmName": "FirmB",
+      "owner": "Owner2",
+      "phone": "67890"
+    },
+    {
+      "address": "Address4",
+      "businessActivity": "Healthcare",
+      "firmName": "FirmC",
+      "owner": "Owner4",
+      "phone": "98765"
+    }
+  ]
+}
