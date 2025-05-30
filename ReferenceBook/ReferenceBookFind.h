@@ -8,7 +8,7 @@ class ReferenceBookFind
 {
 private:
     std::vector<RFPage> founded; // Список найденных страниц
-
+    
 public:
 
     // Поиск по названию фирмы
